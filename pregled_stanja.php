@@ -86,7 +86,7 @@ if(isset($_POST['prezime'])){
   echo "</tr>";
   echo "</table>";
 }
-$result = $conn->prepare("SELECT sum(stanje) FROM racun WHERE prezime=:prezime_to_view"); 
+$result = $conn->prepare("SELECT sum (stanje) FROM racun WHERE prezime=:prezime_to_view"); 
 $result->bindParam(':prezime', $prezime_to_view, PDO::PARAM_INT);
 $result->execute();
 $rowCount = $result->fetchColumn(0);
