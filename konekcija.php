@@ -12,10 +12,7 @@ try {
 	$conn = new PDO('mysql: host=localhost; dbname=banka', 'root', '');
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-	/*
-$dsn = 'mysql:dbname='.banka.';host='.localhost.';port='.DB_PORT;
-$dbh = new PDO($dsn, adminAeyqc8b , 9rJH41FXCSCe);
-	*/
+	
 } catch (PDOException $e) {
 
 	echo $e->getMessage();
